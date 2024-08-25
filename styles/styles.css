@@ -1,0 +1,9 @@
+#calc {
+    height: 500px;
+    width: 400px;
+    border: 1px black solid;
+}
+
+#display {
+    border: 1px black solid;
+}
