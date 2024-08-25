@@ -21,3 +21,12 @@ function divide(x, y) {
   let a = x / y;
   return a;
 }
+
+function operate() {}
+
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    console.log(button.id);
+  });
+});
