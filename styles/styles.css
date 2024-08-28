@@ -1,9 +1,47 @@
 #calc {
-    height: 500px;
+    height: 600px;
     width: 400px;
     border: 1px black solid;
+    padding: 15px;
+    font-family: "Courier New", monospace;
+    background-color: lightgray;
+    border-radius: 20px;
 }
 
 #display {
     border: 1px black solid;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    font-size: 30px;
+    padding: 0px 10px;
+    background-color: white;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.digit {
+    width: 100px;
+    height: 100px;
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+    font-weight: bold;
+    border-color: grey;
+}
+
+#zero {
+    width: 200px;
+}
+
+.top {
+    background-color: darkgray;
+}
+
+.right {
+    background-color: lightsteelblue;
 }
