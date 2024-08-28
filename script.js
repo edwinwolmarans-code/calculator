@@ -1,5 +1,7 @@
-let x;
-let y;
+let x = [];
+let y = [];
+let input = [];
+let op;
 
 // mathematical operators
 function add(x, y) {
@@ -22,11 +24,42 @@ function divide(x, y) {
   return a;
 }
 
-function operate() {}
+function operate() {
+  seperator = input.indexOf("|");
+  console.log(`Seperator index ${seperator}`);
+  input.forEach((item, index) => {
+    if (index < seperator) {
+      x.push(item);
+    } else if (index > seperator) {
+      y.push(item);
+    }
+  });
+  console.log(`x: ${x}`);
+  console.log(`y: ${y}`);
+}
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    console.log(button.id);
+    // adds button content to an array
+    if (button.id === "divide") {
+      op = button.id;
+      input.push("|");
+    } else if (button.id === "mult") {
+      op = button.id;
+      input.push("|");
+    } else if (button.id === "sub") {
+      op = button.id;
+      input.push("|");
+    } else if (button.id === "plus") {
+      op = button.id;
+      input.push("|");
+    } else if (button.id === "equal") {
+      operate();
+    } else {
+      input.push(button.textContent);
+    }
+    console.log(`input array: ${input}`);
+    console.log(`operation: ${op}`);
   });
 });
