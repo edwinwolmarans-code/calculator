@@ -1,5 +1,5 @@
-let x = [];
-let y = [];
+let numOne = [];
+let numTwo = [];
 let input = [];
 let op;
 
@@ -29,13 +29,17 @@ function operate() {
   console.log(`Seperator index ${seperator}`);
   input.forEach((item, index) => {
     if (index < seperator) {
-      x.push(item);
+      numOne.push(item);
     } else if (index > seperator) {
-      y.push(item);
+      numTwo.push(item);
     }
   });
+  let x = Number(numOne.join(""));
+  let y = Number(numTwo.join(""));
   console.log(`x: ${x}`);
+  console.log(`x type: ${typeof x}`);
   console.log(`y: ${y}`);
+  console.log(`y type: ${typeof y}`);
 }
 
 const buttons = document.querySelectorAll("button");

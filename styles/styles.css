@@ -1,7 +1,12 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
 #calc {
     height: 600px;
     width: 400px;
-    border: 1px black solid;
+    border: 2px black solid;
     padding: 15px;
     font-family: "Courier New", monospace;
     background-color: lightgray;
