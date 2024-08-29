@@ -33,6 +33,16 @@ function display(a) {
   display.textContent = a;
 }
 
+function clear() {
+  a = 0;
+  x = 0;
+  y = 0;
+  input = [];
+  numOne.length = 0;
+  numTwo.length = 0;
+  display(a);
+}
+
 function operate() {
   seperator = input.indexOf("|");
   console.log(`Seperator index ${seperator}`);
@@ -71,6 +81,8 @@ buttons.forEach((button) => {
       input.push("|");
     } else if (button.id === "equal") {
       operate();
+    } else if (button.id === "clear") {
+      clear();
     } else {
       input.push(button.textContent);
     }
