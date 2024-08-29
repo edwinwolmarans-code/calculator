@@ -32,6 +32,22 @@ function divide(x, y) {
   }
 }
 
+function swop() {
+  let num = -1 * convert();
+  display(num);
+  return num;
+}
+// function percentage(x, y) {
+//   if (y === 0) {
+//     let a = x / 100;
+//     display(a);
+//   } else {
+//     let a = (x / 100) * y;
+//     display(a);
+//     return a;
+//   }
+// }
+
 function display(a) {
   const display = document.querySelector("#display");
   display.textContent = a;
@@ -45,7 +61,7 @@ function clear() {
   numTwo.length = 0;
 }
 
-function operate() {
+function convert() {
   seperator = input.indexOf("|");
   console.log(`Seperator index ${seperator}`);
   input.forEach((item, index) => {
@@ -57,6 +73,13 @@ function operate() {
   });
   let x = Number(numOne.join(""));
   let y = Number(numTwo.join(""));
+  return [x, y];
+}
+
+function operate() {
+  let [x, y] = convert();
+  console.log(`x: ${x}`);
+  console.log(`y: ${y}`);
 
   if (op === "plus") {
     add(x, y);
@@ -66,6 +89,8 @@ function operate() {
     multiply(x, y);
   } else if (op === "divide") {
     divide(x, y);
+  } else if (op === "percent") {
+    percentage(x, y);
   }
   clear();
 }
@@ -78,7 +103,8 @@ buttons.forEach((button) => {
       button.id === "plus" ||
       button.id === "sub" ||
       button.id === "mult" ||
-      button.id === "divide"
+      button.id === "divide" ||
+      button.id === "percent"
     ) {
       op = button.id;
       input.push("|");
@@ -87,6 +113,8 @@ buttons.forEach((button) => {
     } else if (button.id === "clear") {
       clear();
       display(0);
+    } else if (button.id === "sign") {
+      swop();
     } else {
       input.push(button.textContent);
     }
