@@ -23,9 +23,13 @@ function multiply(x, y) {
 }
 
 function divide(x, y) {
-  let a = x / y;
-  display(a);
-  return a;
+  if (y === 0) {
+    display("do you even math bro?!");
+  } else {
+    let a = x / y;
+    display(a);
+    return a;
+  }
 }
 
 function display(a) {
