@@ -36,26 +36,28 @@ function operate() {
   });
   let x = Number(numOne.join(""));
   let y = Number(numTwo.join(""));
-  console.log(`x: ${x}`);
-  console.log(`x type: ${typeof x}`);
-  console.log(`y: ${y}`);
-  console.log(`y type: ${typeof y}`);
+
+  if ((op = "plus")) {
+    add(x, y);
+  } else if ((op = "sub")) {
+    substract(x, y);
+  } else if ((op = "mult")) {
+    multiply(x, y);
+  } else if ((op = "divide")) {
+    divide(x, y);
+  }
 }
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     // adds button content to an array
-    if (button.id === "divide") {
-      op = button.id;
-      input.push("|");
-    } else if (button.id === "mult") {
-      op = button.id;
-      input.push("|");
-    } else if (button.id === "sub") {
-      op = button.id;
-      input.push("|");
-    } else if (button.id === "plus") {
+    if (
+      button.id === "plus" ||
+      button.id === "sub" ||
+      button.id === "mult" ||
+      button.id === "divide"
+    ) {
       op = button.id;
       input.push("|");
     } else if (button.id === "equal") {
