@@ -38,13 +38,11 @@ function display(a) {
 }
 
 function clear() {
-  a = 0;
   x = 0;
   y = 0;
   input = [];
   numOne.length = 0;
   numTwo.length = 0;
-  display(a);
 }
 
 function operate() {
@@ -69,6 +67,7 @@ function operate() {
   } else if (op === "divide") {
     divide(x, y);
   }
+  clear();
 }
 
 const buttons = document.querySelectorAll("button");
@@ -87,6 +86,7 @@ buttons.forEach((button) => {
       operate();
     } else if (button.id === "clear") {
       clear();
+      display(0);
     } else {
       input.push(button.textContent);
     }
