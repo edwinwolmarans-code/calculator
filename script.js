@@ -24,6 +24,11 @@ function divide(x, y) {
   return a;
 }
 
+function display() {
+  const display = document.querySelector("#display");
+  display.textContent = 50000;
+}
+
 function operate() {
   seperator = input.indexOf("|");
   console.log(`Seperator index ${seperator}`);
@@ -69,3 +74,5 @@ buttons.forEach((button) => {
     console.log(`operation: ${op}`);
   });
 });
+
+display();
