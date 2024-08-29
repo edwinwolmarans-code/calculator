@@ -20,7 +20,8 @@ body {
     justify-content: flex-end;
     align-items: center;
     font-size: 35px;
-    padding: 0px 10px;
+    font-weight: bold;
+    padding: 0px 20px;
     background-color: white;
 }
 

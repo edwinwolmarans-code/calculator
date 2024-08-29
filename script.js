@@ -6,27 +6,31 @@ let op;
 // mathematical operators
 function add(x, y) {
   let a = x + y;
+  display(a);
   return a;
 }
 
 function substract(x, y) {
   let a = x - y;
+  display(a);
   return a;
 }
 
 function multiply(x, y) {
   let a = x * y;
+  display(a);
   return a;
 }
 
 function divide(x, y) {
   let a = x / y;
+  display(a);
   return a;
 }
 
-function display() {
+function display(a) {
   const display = document.querySelector("#display");
-  display.textContent = 50000;
+  display.textContent = a;
 }
 
 function operate() {
@@ -42,13 +46,13 @@ function operate() {
   let x = Number(numOne.join(""));
   let y = Number(numTwo.join(""));
 
-  if ((op = "plus")) {
+  if (op === "plus") {
     add(x, y);
-  } else if ((op = "sub")) {
+  } else if (op === "sub") {
     substract(x, y);
-  } else if ((op = "mult")) {
+  } else if (op === "mult") {
     multiply(x, y);
-  } else if ((op = "divide")) {
+  } else if (op === "divide") {
     divide(x, y);
   }
 }
@@ -74,5 +78,3 @@ buttons.forEach((button) => {
     console.log(`operation: ${op}`);
   });
 });
-
-display();
