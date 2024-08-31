@@ -63,6 +63,8 @@ class Calculator {
     let integerDisplay;
     if (isNaN(integerDigits)) {
       integerDisplay = "";
+    } else if (stringNumber === "Infinity") {
+      integerDisplay = "Do you even\n math bro?";
     } else {
       integerDisplay = integerDigits.toLocaleString("en", {
         maximumFractionDigits: 0,
