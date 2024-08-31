@@ -10,11 +10,12 @@
     <body>
         <div id="calc">
             <div id="display">
-                <h3>0</h3>
+                <div data-previous-operand class="previous-operand">123</div>
+                <div data-current-operand class="current-operand">456</div>
             </div>
             <div class="buttons">
                 <button class="digit top" data-all-clear>AC</button>
-                <button class="digit top" id="percent">DEL</button>
+                <button class="digit top" data-delete>DEL</button>
                 <button class="digit top" id="sign">+/-</button>
                 <button class="digit right" data-operation>÷</button>
                 <button class="digit" data-number>7</button>
