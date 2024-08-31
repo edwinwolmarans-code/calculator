@@ -4,7 +4,7 @@ body {
 }
 
 #calc {
-    height: 600px;
+    height: 625px;
     width: 400px;
     border: 2px black solid;
     padding: 15px;
@@ -17,14 +17,26 @@ body {
     border: 1px black solid;
     height: 100px;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 35px;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px 20px;
+    word-wrap: break-word;
+    word-break: break-all;
     font-weight: bold;
-    padding: 0px 20px;
     background-color: white;
     word-wrap: break-word;
     word-break: break-all;
+}
+
+#display .previous-operand {
+    color: rgb(81, 87, 109, 0.75);
+    font-size: 1.5rem;
+}
+
+#display .current-operand {
+    color: rgb(81, 87, 109);
+    font-size: 2.5rem;
 }
 
 .buttons {
@@ -48,7 +60,12 @@ body {
     background-color: rgb(153, 209, 219, 0.75);
 }
 
-#zero {
+.digit:hover {
+    background-color: rgb(153, 209, 219, 0.75);
+    cursor: pointer;
+}
+
+.span-two {
     width: 200px;
 }
 
