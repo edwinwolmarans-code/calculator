@@ -6,7 +6,7 @@ class Calculator {
   }
 
   clear() {
-    this.currentOperand = "";
+    this.currentOperand = "0";
     this.previousOperand = "";
     this.operation = undefined;
   }
@@ -123,5 +123,11 @@ allClearButton.addEventListener("click", (button) => {
 
 deleteButton.addEventListener("click", (button) => {
   calculator.delete();
+  calculator.updateDisplay();
+});
+
+let key = document.getElementById("container");
+key.addEventListener("keydown", (event) => {
+  calculator.appendNumber(event.key);
   calculator.updateDisplay();
 });
