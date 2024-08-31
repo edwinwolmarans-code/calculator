@@ -64,6 +64,7 @@ function clear() {
 function convert() {
   seperator = input.indexOf("|");
   console.log(`Seperator index ${seperator}`);
+
   input.forEach((item, index) => {
     if (index < seperator) {
       numOne.push(item);
@@ -78,8 +79,6 @@ function convert() {
 
 function operate() {
   let [x, y] = convert();
-  console.log(`x: ${x}`);
-  console.log(`y: ${y}`);
 
   if (op === "plus") {
     add(x, y);
@@ -98,7 +97,6 @@ function operate() {
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    // adds button content to an array
     if (
       button.id === "plus" ||
       button.id === "sub" ||

@@ -9,7 +9,7 @@ body {
     border: 2px black solid;
     padding: 15px;
     font-family: "Courier New", monospace;
-    background-color: lightgray;
+    background-color: rgb(98, 104, 128);
     border-radius: 20px;
 }
 
@@ -38,6 +38,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     border-color: grey;
+    background-color: rgb(245, 245, 245);
 }
 
 #zero {
@@ -45,9 +46,9 @@ body {
 }
 
 .top {
-    background-color: darkgray;
+    background-color: rgb(81, 87, 109);
 }
 
 .right {
-    background-color: lightsteelblue;
+    background-color: rgb(140, 170, 238);
 }
