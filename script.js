@@ -23,14 +23,14 @@ class Calculator {
   chooseOperation(operation) {
     if (this.currentOperand === "") return;
     if (this.previousOperand !== "") {
-      this.compute();
+      this.operate();
     }
     this.operation = operation;
     this.previousOperand = this.currentOperand;
     this.currentOperand = "";
   }
 
-  compute() {
+  operate() {
     let computation;
     const prev = parseFloat(this.previousOperand);
     const current = parseFloat(this.currentOperand);
@@ -114,7 +114,7 @@ operationButtons.forEach((button) => {
 });
 
 equalsButton.addEventListener("click", (button) => {
-  calculator.compute();
+  calculator.operate();
   calculator.updateDisplay();
 });
 
